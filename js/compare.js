@@ -4,7 +4,8 @@ const carros = {
         motor: "2.2 Diesel",
         tracao: "4x4",
         cambio: "Manual",
-        preco: "R$183.850"
+        preco: "R$183.850",
+        imagem: "imagens ford/XL Cabine.jpg"
     },
 
     carro_diesel: {
@@ -12,7 +13,8 @@ const carros = {
         motor: "2.2 Diesel",
         tracao: "4x4",
         cambio: "Automático",
-        preco: "R$220.690"
+        preco: "R$220.690",
+        imagem: "imagens ford/xls 2.2 diesel.jpg"
     },
 
     carro_storm: {
@@ -20,7 +22,8 @@ const carros = {
         motor: "3.2 Diesel",
         tracao: "4x4",
         cambio: "Automático",
-        preco: "R$222.790"
+        preco: "R$222.790",
+        imagem: "imagens ford/storm.jpg"
     }
 };
 
@@ -29,8 +32,7 @@ const botao = document.getElementById("comparar");
 botao.addEventListener("click", () => {
 
     const selecionados = [];
-
-    // pega os checkboxes marcados
+    
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
     checkboxes.forEach((checkbox) => {
@@ -41,18 +43,21 @@ botao.addEventListener("click", () => {
 
     });
 
-    // validação
     if (selecionados.length < 2) {
         alert("Selecione pelo menos 2 carros.");
         return;
     }
 
-    // área onde a comparação aparecerá
     const resultado = document.getElementById("resultadoComparacao");
 
     resultado.innerHTML = `
     
     <table border="1" cellpadding="10" cellspacing="0">
+    <tr>
+        <th>Imagem</th>
+        <th><img src="${selecionados[0].imagem}" alt="${selecionados[0].nome} - Ford truck front view" width="100"></th>
+        <th><img src="${selecionados[1].imagem}" alt="${selecionados[1].nome} - Ford truck front view" width="100"></th>
+    </tr>
         <tr>
             <th>Informações</th>
             <th>${selecionados[0].nome}</th>
