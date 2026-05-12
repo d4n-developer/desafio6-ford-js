@@ -209,6 +209,27 @@ strong{
 .botao_comparacao:hover{
     background-color: blue;
 }
+#resultadoComparacao{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th{
+    background-color: #003478;
+    color: white;
+}
+
+td, th{
+    padding: 15px;
+    text-align: center;
+}
 .main_contato{
     display: flex;
     flex: 1;
