@@ -1,0 +1,250 @@
+:root{
+    --cor-texto-azul: #1351d8;
+    --cor-fundo-footer: #1b3571;
+    --cor-texto-branco: aliceblue;
+}
+* {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  margin: 0%;
+  padding: 0%;
+}
+html,body{
+    height: 100%;
+}
+.header{
+    margin: auto;
+    max-width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+    box-shadow: 0 2px 10px gray;
+}
+.header p{
+    margin: 0;
+    padding: 50px;
+    justify-content: center;
+    font-family: "montserrat", sans-serif;
+    font-size: larger;
+    
+}
+.header_home{
+    padding: 20px;
+    color: var(--cor-texto-azul);
+    text-decoration: none;
+}
+.header_lancamento{
+    padding: 20px;
+    color: var(--cor-texto-azul);
+    text-decoration: none;
+}
+.header_contato{
+    padding: 20px;
+    color: var(--cor-texto-azul);
+    text-decoration: none;
+}
+
+.logo_topo{
+    max-width: 20%;
+    height: 20%;
+}
+
+footer{
+    font-family: "montserrat", sans-serif;
+    padding: 10px;
+    background-color: var(--cor-fundo-footer);
+    color: var(--cor-texto-branco);
+    flex-wrap: wrap;
+}
+.footer-conteudo{
+    order: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "montserrat",sans-serif;
+}
+.redes a img:hover{
+    transform: scale(1.2) ;
+}
+.copyright{
+    order: 2;
+    justify-content: center;
+    text-align: justify;
+}
+.copyright_link{
+     text-decoration: none;
+     color: var(--cor-texto-branco);
+}
+.logo{
+    order: 3;
+    justify-content: right;
+    text-align: baseline;
+}
+
+.video{
+    display: flex;
+    height: 400px;
+    max-width: 100%;
+}
+.carros{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.carro_cabine{
+    margin: 30px;
+    max-width: 100%;
+    height: auto;
+}
+.carro_cabine:hover{
+    transform: scale(1.2);
+}
+.carro_diesel{
+    margin: 30px;
+    display: flex;
+    max-width: 100%;
+    height: auto;
+}
+.carro_diesel:hover{
+    transform: scale(1.2);
+}
+.carro_storm{
+    margin: 30px;
+    max-width: 100%;
+    height: auto;
+}
+.carro_storm:hover{
+    transform: scale(1.2);
+}
+.input_carros{
+    display: flex;
+    justify-content: center;
+    height: 1%;
+}
+.input_cabine{
+    margin: 50px;
+    text-align: center;
+    padding: 1%;
+}
+.input_diesel{
+    margin: 50px;
+}
+.input_storm{
+    margin: 60px;
+}
+strong{
+    color: var(--cor-texto-azul);
+}
+.botao_comparacao{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto ;
+    background-color: var(--cor-texto-azul);
+    color: var(--cor-texto-branco);
+    padding: 10px 50px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+
+}
+.botao_comparacao:hover{
+    background-color: blue;
+}
+.main_contato{
+    display: flex;
+    flex: 1;
+    height: 90%;
+    align-items: center ;
+    justify-content: center;
+    margin-top: 40px;
+}
+.img_contato{
+    display: flex;
+    max-width: 50%;
+    height: auto;
+    width: 20%;
+    padding: 2%;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 0%;
+    text-align: left;
+}
+
+.form-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+.form-grid input,
+.form_grid select,
+.form-grid textarea{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.form-grid textarea{
+height: 100px;
+resize: none
+}
+.botao_enviar{
+    padding: 10px 60px;
+    color: var(--cor-texto-branco);
+    background-color: var(--cor-texto-azul);
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.botao_enviar:hover{
+    background-color: blue;
+}
+@media (max-width: 768px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        margin: 0%;
+    }
+    .footer-conteudo{
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .video{
+        height: 400px;
+    }
+    .carros {
+        flex-direction: column;
+        align-items: center;
+    }
+    .input_carros {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        
+    }
+
+    .input_carros input {
+        margin: 5px 0;
+    }
+    .main_contato{
+        flex-direction: column;
+    }
+    .img_contato{
+        width: 40%;
+    }
+    .form-grid {
+        width: 200px;
+    }
+   
+}
